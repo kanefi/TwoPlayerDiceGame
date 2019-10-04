@@ -55,18 +55,21 @@ class TwoPlayerViewController: UIViewController {
         if (togglePlayer == true) {
             if  (randomDiceIndex == 0) {
                 print ("Player One lost, Player Two's turn.")
-                    PlayerMessageLabel.text = "Player One lost, Player Two's turn."
-                    playerToggleFunction()
-                    playerOneScore = 0
-                    //updatePlayerScore()
+                PlayerMessageLabel.text = "Player One lost, Player Two's turn."
+                playerOneScore = 0
+                scoreLabelPlayerOne.text = "0"
+
+                //              updatePlayerScore()
+                playerToggleFunction()
                 }
                 
                 else if (playerOneScore >= 21) {
                         print ("Player One won! Player Two's turn.")
                         PlayerMessageLabel.text = "Player One won! Player Two's turn."
-                        playerToggleFunction()
                         playerOneScore = 0
-                        //updatePlayerScore()
+                scoreLabelPlayerOne.text = "0"
+                //      updatePlayerScore()
+                playerToggleFunction()
 
                     }
                 else {
@@ -79,6 +82,8 @@ class TwoPlayerViewController: UIViewController {
                     print ("Player Two lost, Player One's turn.")
                     PlayerMessageLabel.text = "Player Two lost, Player One's turn."
                     playerTwoScore = 0
+                scoreLabelPlayerTwo.text = "0"
+
                     playerToggleFunction()
                 }
                     
@@ -86,6 +91,7 @@ class TwoPlayerViewController: UIViewController {
                     print ("Player Two won! Player One's turn.")
                     PlayerMessageLabel.text = "Player Two won! Player One's turn."
                     playerTwoScore = 0
+                scoreLabelPlayerTwo.text = "0"
                     playerToggleFunction()
                 }
                 else {
